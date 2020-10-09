@@ -13,6 +13,7 @@ public class Main {
 
         User userTom = new User("Tom","tom@gmail.com");
         Admin adminSam = new Admin("Sam","sam@gmail.com");
+        User userDon = new User("don@gmail.com");
 
 //        4.2. С любым из сущностей вызвать UserService(Записать данные пользователя) - убедиться, что наш запрет
 //        работает и выводиться нужное сообщение
@@ -32,6 +33,7 @@ public class Main {
 //        4.5. С сущностью User вызвать сервис AdminService(Проверить пользователя) - убедиться что данный пользователь
 //        есть в файлике
         adminService.checkUser(userTom);
+        adminService.checkUser(userDon);
 
     }
 }
