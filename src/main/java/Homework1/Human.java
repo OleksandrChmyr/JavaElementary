@@ -16,12 +16,22 @@ public abstract class Human {
     private int age;
     private String email;
     private String password;
-    private String role;
+    private Type role;
 
     public Human() {
     }
 
-    public Human(String name, String surname, int age, String email, String password, String role) {
+    public Human(String email) {
+        this.email = email;
+    }
+
+    public Human(String name, String email, Type role) {
+        this.name = name;
+        this.email = email;
+        this.role = role;
+    }
+
+    public Human(String name, String surname, int age, String email, String password, Type role) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -70,11 +80,11 @@ public abstract class Human {
         this.password = password;
     }
 
-    public String getRole() {
+    public Type getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Type role) {
         this.role = role;
     }
 
@@ -106,6 +116,11 @@ public abstract class Human {
                 ", password='" + password + '\'' +
                 ", role='" + role + '\'' +
                 '}';
+    }
+
+    enum Type {
+        USER,
+        ADMIN,
     }
 
 }
