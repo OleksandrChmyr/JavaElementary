@@ -1,13 +1,30 @@
-
-Human{name='null', surname='null', age=0, email='tom@gmail.com', password='null', role='USER'}
-Human{name='null', surname='null', age=0, email='sam@gmail.com', password='null', role='ADMIN'}
-Human{name='null', surname='null', age=0, email='tom@gmail.com', password='null', role='USER'}
-Human{name='null', surname='null', age=0, email='sam@gmail.com', password='null', role='ADMIN'}
-Human{name='null', surname='null', age=0, email='tom@gmail.com', password='null', role='USER'}
-Human{name='null', surname='null', age=0, email='sam@gmail.com', password='null', role='ADMIN'}
-Human{name='null', surname='null', age=0, email='tom@gmail.com', password='null', role='USER'}
-Human{name='null', surname='null', age=0, email='sam@gmail.com', password='null', role='ADMIN'}
-User{}
-Admin{}
-User{}
-Admin{}
+USER
+Tom
+tom@gmail.com
+ADMIN
+Sam
+sam@gmail.com
+USER
+Tom
+tom@gmail.com
+ADMIN
+Sam
+sam@gmail.com
+USER
+Tom
+tom@gmail.com
+ADMIN
+Sam
+sam@gmail.com
+USER
+Tom
+tom@gmail.com
+ADMIN
+Sam
+sam@gmail.com
+USER
+Tom
+tom@gmail.com
+ADMIN
+Sam
+sam@gmail.com

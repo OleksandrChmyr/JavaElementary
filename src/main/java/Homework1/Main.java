@@ -13,8 +13,8 @@ public class Main {
 //        User userTom = new User("tom@gmail.com");
 //        Admin adminSam = new Admin("sam@gmail.com");
 
-        User userTom = new User("tom@gmail.com");
-        Admin adminSam = new Admin("sam@gmail.com");
+        User userTom = new User("Tom","tom@gmail.com");
+        Admin adminSam = new Admin("Sam","sam@gmail.com");
 
 //        4.2. С любым из сущностей вызвать UserService(Записать данные пользователя) - убедиться, что наш запрет
 //        работает и выводиться нужное сообщение

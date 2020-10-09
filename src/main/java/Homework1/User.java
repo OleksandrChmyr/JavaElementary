@@ -12,6 +12,11 @@ public class User extends Human {
         setRole(Type.USER);
     }
 
+    public User(String name, String email) {
+        super(name, email);
+        setRole(Type.USER);
+    }
+
     public User(String name, String email, Type role) {
         super(name, email, role);
         setRole(Type.USER);
@@ -22,8 +27,5 @@ public class User extends Human {
         setRole(Type.USER);
     }
 
-    @Override
-    public String toString() {
-        return "User{}";
-    }
+
 }

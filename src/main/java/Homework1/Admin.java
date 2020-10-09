@@ -11,6 +11,11 @@ public class Admin extends Human {
         setRole(Type.ADMIN);
     }
 
+    public Admin(String name, String email) {
+        super(name, email);
+        setRole(Type.ADMIN);
+    }
+
     public Admin(String name, String email, Type role) {
         super(name, email, role);
         setRole(Type.ADMIN);
@@ -21,8 +26,5 @@ public class Admin extends Human {
         setRole(Type.ADMIN);
     }
 
-    @Override
-    public String toString() {
-        return "Admin{}";
-    }
+
 }

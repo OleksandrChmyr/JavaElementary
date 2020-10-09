@@ -22,8 +22,15 @@ public class AdminService extends UserService{
             Path directories = Files.createDirectories(pathToFile.getParent());
         }
         FileWriter userWriter = new FileWriter(path, true);
+        Human.Type role = human.getRole();
+        String name = human.getName();
+        String email = human.getEmail();
+        userWriter.write(String.valueOf(role));
         userWriter.write("\n");
-        userWriter.write(String.valueOf(human));
+        userWriter.write(name);
+        userWriter.write("\n");
+        userWriter.write(email);
+        userWriter.write("\n");
         userWriter.close();
     }
 

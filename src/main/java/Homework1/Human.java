@@ -25,6 +25,11 @@ public abstract class Human {
         this.email = email;
     }
 
+    public Human(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
     public Human(String name, String email, Type role) {
         this.name = name;
         this.email = email;

@@ -30,21 +30,15 @@ public class UserService implements ServiceContract {
         Scanner userScanner = new Scanner(userReader);
         while (userScanner.hasNextLine()) {
             String user = userScanner.nextLine();
-            if (user.equalsIgnoreCase(String.valueOf(human))) {
+            if (user.equalsIgnoreCase(human.getEmail())) {
                 System.out.println("User found");
-
                 return true;
-
-            } else {
-                System.out.println("User not found");
-
-                return false;
             }
         }
-        userReader.close();
         userScanner.close();
-        return true;
-
+        userReader.close();
+        System.out.println("User not found");
+        return false;
     }
 
 
