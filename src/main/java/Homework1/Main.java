@@ -4,8 +4,6 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        System.out.println("Ah sh*t, here we go again \n");
-
 
 //        4. После того как все классы написаны, в классе Main запустить программу с определенной логикой:
 
