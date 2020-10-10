@@ -20,9 +20,6 @@ public class UserService implements ServiceContract {
 
     @Override
     public boolean checkUser(Human human) throws IOException {
-//        System.out.println("User check. Please enter user email: ");
-//        Scanner scanner = new Scanner(System.in);
-//        String userCheck = scanner.next();
 
         String path = "src/main/resources/HT1/UserList";
 
@@ -48,7 +45,7 @@ public class UserService implements ServiceContract {
 //   UserService просто выводить сообщение о недоступности данного метода в сервисе.
 
     @Override
-    public void writeUserData(Human human) throws IOException {
+    public void writeUserData(Human human) {
         if (human instanceof User) {
             System.out.println("Service unavailable for Users");
         }

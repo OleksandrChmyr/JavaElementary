@@ -4,13 +4,35 @@ package Homework1;
 // прописанных далее методов. Чтобы выполнить полиморфизм в данном случае необходимо заключить контракт
 // (Подсказка: применить Interface).
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
-public class AdminService extends UserService{
+public class AdminService implements ServiceContract {
+
+    @Override
+    public boolean checkUser(Human human) throws IOException {
+
+        String path = "src/main/resources/HT1/UserList";
+
+        FileReader userReader = new FileReader(path);
+        Scanner userScanner = new Scanner(userReader);
+        while (userScanner.hasNextLine()) {
+            String user = userScanner.nextLine();
+            if (user.equalsIgnoreCase(human.getEmail())) {
+                System.out.println("User found");
+                return true;
+            }
+        }
+        userScanner.close();
+        userReader.close();
+        System.out.println("User not found");
+        return false;
+    }
 
     @Override
     public void writeUserData(Human human) throws IOException {
@@ -32,6 +54,7 @@ public class AdminService extends UserService{
         userWriter.write(email);
         userWriter.write("\n");
         userWriter.close();
+        System.out.println("User has been successfully written");
     }
 
 
