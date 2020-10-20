@@ -14,6 +14,9 @@ public class Information {
     private HashMap<String,String> userData;
 
     public Information() {
+        userName = new ArrayList<>();
+        userEmail = new HashSet<>();
+        userData = new HashMap<>();
     }
 
     public Information(ArrayList<String> userName, HashSet<String> userEmail, HashMap<String, String> userData) {

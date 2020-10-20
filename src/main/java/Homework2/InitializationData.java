@@ -1,5 +1,6 @@
 package Homework2;
 
+
 import java.util.*;
 
 public class InitializationData {
@@ -10,10 +11,23 @@ public class InitializationData {
     //2.1. Наполнить тридцатью уникальными значениями каждое из 3х полей класса “Information” (можно автоматически в цикле);
     public static Information informationInitData(Information information, String name, int listLimit) {
         for (int i = 1; i <= listLimit; i++) {
+//            ArrayList<String> names = new ArrayList<>();
+//            names.add(name + i);
+//            information.setUserName(names);
+//            HashSet<String> emails = new HashSet<>();
+//            emails.add(name + "gmail.com");
+//            information.setUserEmail(emails);
+//            HashMap<String, String> usersHashMap = new HashMap<>();
+//            usersHashMap.put(name + i, name + "gmail.com");
+//
+//            information.setUserData(usersHashMap);
+//        }
+
             information.getUserName().add(name + i);
             information.getUserEmail().add(name + i + "gmail.com");
-            information.getUserData().put(String.valueOf(information.getUserName()), String.valueOf(information.getUserEmail()));
+            information.getUserData().put(name + i + "gmail.com", name + i);
         }
+
 
         return information;
 
@@ -32,7 +46,7 @@ public class InitializationData {
                 information.getUserName().add(name);
             }
             information.getUserEmail().add(name + "mail.com");
-            information.getUserData().put(String.valueOf(information.getUserName()), String.valueOf(information.getUserEmail()));
+            information.getUserData().put(name + "mail.com", name);
 
 
         }
