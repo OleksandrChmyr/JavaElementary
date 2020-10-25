@@ -1,10 +1,12 @@
-package Homework2;
+package homework2_1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Random;
 
-import static Homework2.InitializationData.*;
+import static homework2_1.InitializationData.informationInitData;
+import static homework2_1.InitializationData.informationInitData2;
 
-public class Main {
+public class Main1 {
     public static void main(String[] args) {
         int listLimit = 30;
         int listLimit2 = 10;

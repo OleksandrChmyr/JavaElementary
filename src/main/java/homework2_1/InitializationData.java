@@ -1,7 +1,5 @@
-package Homework2;
+package homework2_1;
 
-
-import java.util.*;
 
 public class InitializationData {
     //2. Создать класс “InitializationData” и метод внутри него, который будет предоставлять/наполнять данные для теста
