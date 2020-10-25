@@ -14,12 +14,12 @@ public class ParameterCheckHelper {
 
     public static void checkAmount (double amount, double amountLimit) throws WrongSumException {
             if (amount > amountLimit) {
-                throw new WrongSumException("Your maximum transfer limit is" + String.valueOf(amountLimit));
+                throw new WrongSumException("Your maximum transfer limit is " + String.valueOf(amountLimit));
             }
     }
     public static void checkTargetUser (String clientAccID, String clientAccID2) throws UserExpectedError {
         if (!clientAccID.equals(clientAccID2)){
-            throw new UserExpectedError("Operation is not valid. You can not transfer money this account, " +
+            throw new UserExpectedError("Operation is not valid. You can not transfer money to this account, " +
                     "please choose another client Account ID number");
         }
     }
