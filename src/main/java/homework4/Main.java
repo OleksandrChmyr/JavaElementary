@@ -14,7 +14,7 @@ public class Main {
         double amountLimit = 1000;
         Client client = new Client();
         Client client2 = new Client();
-        String validAccID2 = new String();
+//        String validAccID2 = new String();
 
         boolean isFieldValid = false;
         do {
@@ -69,7 +69,7 @@ public class Main {
         } while (!isFieldValid3);
         System.out.println("Client Account ID #2 is acceptable ");
 
-        validAccID2 = client2.getClientAccID();
+        String validAccID2 = client2.getClientAccID();
         TransactionServices.moneyTransfer(client,validAccID2);
     }
 }
