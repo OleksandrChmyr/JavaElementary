@@ -13,8 +13,8 @@ public class Main {
         int maxAccIDLength = 10;
         double amountLimit = 1000;
         Client client = new Client();
-        Client client2 = new Client();
-//        String validAccID2 = new String();
+//        Client client2 = new Client();
+        String validAccID2;
 
         boolean isFieldValid = false;
         do {
@@ -37,20 +37,16 @@ public class Main {
         do {
             System.out.println("Please enter Client Account ID #2");
             Scanner scanner = new Scanner(System.in);
-            String clientAccID2 = scanner.nextLine();
+            validAccID2 = scanner.nextLine();
             try {
-                ParameterCheckHelper.checkClientIDLength(clientAccID2, maxAccIDLength);
+                ParameterCheckHelper.checkClientIDLength(validAccID2, maxAccIDLength);
                 isFieldValid2 = true;
-                client2.setClientAccID(clientAccID2);
-                System.out.println(client2);
-
             } catch (WrongFieldException e) {
                 System.out.println(e.getMessage());
                 System.out.println("ID not valid. Please Try again. ");
             }
         } while (!isFieldValid2);
         System.out.println("Client Account ID #2 is acceptable ");
-
 
 
         boolean isFieldValid3 = false;
@@ -69,8 +65,8 @@ public class Main {
         } while (!isFieldValid3);
         System.out.println("Client Account ID #2 is acceptable ");
 
-        String validAccID2 = client2.getClientAccID();
-        TransactionServices.moneyTransfer(client,validAccID2);
+        TransactionServices.moneyTransfer(client, validAccID2);
+
     }
 }
 
